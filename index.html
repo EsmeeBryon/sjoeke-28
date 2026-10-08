@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gelukkige verjaardag, Shani!</title>
+  <meta name="description" content="Een klein cadeautje op het internet." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎉</text></svg>" />
+</head>
+<body class="is-locked">
+
+  <canvas id="confetti" aria-hidden="true"></canvas>
+
+  <!-- Intro -->
+  <div class="intro" id="intro">
+    <div class="intro__inner">
+      <p class="intro__kicker" id="introKicker"></p>
+      <button class="cadeau" id="cadeauKnop" type="button">
+        <span class="cadeau__lint" aria-hidden="true"></span>
+        <span class="cadeau__strik" aria-hidden="true">🎀</span>
+        <span class="cadeau__label" id="cadeauLabel"></span>
+      </button>
+      <p class="intro__sub" id="cadeauSub"></p>
+    </div>
+    <div class="aftellen" id="aftellen" aria-hidden="true"><span id="aftelGetal"></span></div>
+  </div>
+
+  <!-- Feest -->
+  <main class="feest" id="feest" hidden>
+
+    <header class="hero">
+      <p class="hero__kicker" id="heroKicker"></p>
+      <h1 class="hero__titel" id="heroTitel"></h1>
+      <p class="hero__onder" id="heroOnder"></p>
+      <div class="polaroids" id="heroFotos"></div>
+      <p class="scroll-hint">scroll &darr;</p>
+    </header>
+
+    <section class="sectie sectie--tijdlijn">
+      <h2 class="sectie__titel" id="tijdlijnTitel"></h2>
+      <p class="sectie__intro" id="tijdlijnIntro"></p>
+      <ol class="tijdlijn" id="tijdlijn"></ol>
+    </section>
+
+    <section class="sectie sectie--redenen">
+      <h2 class="sectie__titel" id="redenenTitel"></h2>
+      <p class="sectie__intro" id="redenenIntro"></p>
+      <p class="teller"><span id="tellerNu">0</span> / <span id="tellerTotaal">28</span> gevonden</p>
+      <div class="kaartjes" id="kaartjes"></div>
+    </section>
+
+    <section class="sectie sectie--muur">
+      <h2 class="sectie__titel" id="muurTitel"></h2>
+      <p class="sectie__intro" id="muurIntro"></p>
+      <div class="muur" id="muur"></div>
+    </section>
+
+    <section class="sectie sectie--muziek">
+      <h2 class="sectie__titel" id="muziekTitel"></h2>
+      <p class="sectie__intro" id="muziekIntro"></p>
+      <div class="speler">
+        <div id="speler"></div>
+      </div>
+    </section>
+
+    <section class="sectie sectie--slot">
+      <div class="brief">
+        <h2 class="brief__titel" id="slotTitel"></h2>
+        <div class="brief__tekst" id="slotTekst"></div>
+        <p class="brief__onder" id="slotOnder"></p>
+      </div>
+      <button class="knop-groot" id="slotKnop" type="button"></button>
+    </section>
+
+    <footer class="voet">
+      <p id="voetTekst"></p>
+    </footer>
+  </main>
+
+  <div class="lichtbak" id="lichtbak" hidden>
+    <button class="lichtbak__sluit" id="lichtbakSluit" type="button" aria-label="Sluiten">&times;</button>
+    <button class="lichtbak__pijl lichtbak__pijl--links" id="lichtbakVorige" type="button" aria-label="Vorige">&#8249;</button>
+    <img class="lichtbak__beeld" id="lichtbakBeeld" alt="" />
+    <button class="lichtbak__pijl lichtbak__pijl--rechts" id="lichtbakVolgende" type="button" aria-label="Volgende">&#8250;</button>
+  </div>
+
+  <button class="chaos-knop" id="chaosKnop" type="button" hidden aria-label="Chaos">🎉</button>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="https://open.spotify.com/embed/iframe-api/v1" async></script>
+</body>
+</html>
