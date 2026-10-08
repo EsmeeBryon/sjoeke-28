@@ -586,6 +586,26 @@ img { max-width: 100%; display: block; }
   z-index: 2;
 }
 
+/* Op een gsm mag de foto de volle breedte hebben; de pijlen gaan eronder. */
+@media (max-width: 640px) {
+  .lichtbak {
+    grid-template-columns: 1fr;
+    padding: 4.5rem .75rem 6rem;
+  }
+
+  .lichtbak__beeld { max-height: 72svh; }
+
+  .lichtbak__pijl {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 64px;
+    height: 64px;
+  }
+
+  .lichtbak__pijl--links { left: 22%; }
+  .lichtbak__pijl--rechts { right: 22%; }
+}
+
 /* ---------- Chaosknop ---------- */
 .chaos-knop {
   position: fixed;
