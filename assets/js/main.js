@@ -308,11 +308,13 @@
     $("lichtbakBeeld").src = fotoPad(lichtbakFotos[lichtbakIndex]);
     $("lichtbakBeeld").alt = "Foto " + (lichtbakIndex + 1);
     $("lichtbak").hidden = false;
+    $("chaosKnop").hidden = true;
     document.body.classList.add("is-locked");
   }
 
   function sluitLichtbak() {
     $("lichtbak").hidden = true;
+    $("chaosKnop").hidden = false;
     document.body.classList.remove("is-locked");
   }
 
