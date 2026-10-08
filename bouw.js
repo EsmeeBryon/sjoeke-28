@@ -26,17 +26,17 @@ const lees = (...p) => fs.readFileSync(path.join(wortel, ...p), "utf8");
 
   const html = lees("index.html")
     .replace(
-      '<link rel="stylesheet" href="assets/css/style.css" />',
+      '<link rel="stylesheet" href="assets/css/style.css?v=2" />',
       "<style>\n" + lees("assets", "css", "style.css") + "\n</style>"
     )
     .replace(
-      '<script src="assets/js/content.js"></script>',
+      '<script src="assets/js/content.js?v=2"></script>',
       "<script>window.FOTOS = " + JSON.stringify(fotos) + ";</script>\n  <script>\n" +
         lees("assets", "js", "content.js") +
         "\n</script>"
     )
     .replace(
-      '<script src="assets/js/main.js"></script>',
+      '<script src="assets/js/main.js?v=2"></script>',
       "<script>\n" + lees("assets", "js", "main.js") + "\n</script>"
     );
 
